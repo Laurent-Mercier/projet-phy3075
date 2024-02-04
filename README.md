@@ -4,4 +4,4 @@ Projet de modélisation numérique réalisé en Julia pour le cours PHY3075 (Mod
 
 ## Le rapport détaillant le projet et ses conclusions se trouve ici: [Rapport](./Projet_final.pdf).
 
-## Le code utilisé dans la modélisation se trouve ici: [Rapport](./Projet_final.jl). 
+## Le code utilisé dans la modélisation se trouve ici: [Code](./Projet_final.jl). 
