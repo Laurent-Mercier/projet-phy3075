@@ -256,7 +256,7 @@ function routine_principale(nb_particules, taille_Réseau, itermax, rng, beta, a
 
     scatter(positionx, positiony, markershape=:circle, markercolor=:black, markersize=masse, dpi=300, legend=false) # On crée un graphique qui montre les particules sur le réseau initialement.
     display(scatter!(xlab=L"$x$", ylab=L"$y$"))
-    savefig("/home/laurent/Documents/PHY 3075/Projet final/position_initiale.png")
+    savefig("./position_initiale.png")
 
     for t in 1:itermax # On itère sur le temps.
 
@@ -283,7 +283,7 @@ function routine_principale(nb_particules, taille_Réseau, itermax, rng, beta, a
             scatter(rayon, c_smooth, markershape=:circle, markercolor=:black, markersize=2, dpi=300, legend=false) # On trace C(r) (smooth) en fonction de r. 
             plot!(rfit, yfit, c=:black) # On trace la fonction fitté.
             display(plot!(xlab=L"$r$", ylab=L"$C(r)$"))
-            savefig("/home/laurent/Documents/PHY 3075/Projet final/fit.png")
+            savefig("./fit.png")
             print("$(-(-param[2]-2)) +/- $(erreur[2]), $(itermax)\n") # On imprime la dimension fractale, soit -(-k-2) où 2 est la dimension physique de 2.
 
         end
@@ -292,7 +292,7 @@ function routine_principale(nb_particules, taille_Réseau, itermax, rng, beta, a
 
     scatter(positionx, positiony, markershape=:circle, markercolor=:black, markersize=masse, dpi=300, legend=false) # On crée un graphique qui montre les particules sur le réseau à la fin avec les masses qui correspondent à la taille des points.
     display(scatter!(xlab=L"$x$", ylab=L"$y$"))
-    savefig("/home/laurent/Documents/PHY 3075/Projet final/position_finale.png")
+    savefig("./position_finale.png")
 
     return
 
@@ -323,7 +323,7 @@ function gif_temporel(nb_particules, taille_Réseau, itermax, rng, beta, alpha) 
 
     end
 
-    gif(anim, "/home/laurent/Documents/PHY 3075/Projet final/animation.gif", fps=15) # On sauve le gif.
+    gif(anim, "./animation.gif", fps=15) # On sauve le gif.
 
     return
 
@@ -365,7 +365,7 @@ Dim = [1.9922400119558688, 1.9888186940460557, 1.9766458123573671, 1.97468919389
 err_Dim = [0.00391184752266812, 0.004291377346208982, 0.00408262111222954, 0.003299238880132864, 0.005279461404815343, 0.005288591699887982, 0.008650668197550353, 0.016785251646763505, 0.01961820211885456, 0.022735713505804587, 0.025143579834917145, 0.0255924005171586, 0.025988939470755954, 0.025972744471327476]
 
 scatter(temps, Dim, xscale=:log10, yerror=err_Dim, markershape=:circle, markersize=3, legend=false, dpi=300, markercolor=:black, xlab=L"$t$", ylab=L"$D$")
-savefig("/home/laurent/Documents/PHY 3075/Projet final/Dimension_.png")
+savefig("./Dimension_.png")
 =#
 
 ##
